@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Mairiga Textile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .offline-container {
+            text-align: center;
+            background: white;
+            border-radius: 32px;
+            padding: 48px 32px;
+            max-width: 400px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .offline-icon {
+            font-size: 80px;
+            margin-bottom: 24px;
+        }
+        
+        h1 {
+            color: #0f172a;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        
+        p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        
+        .retry-button {
+            background: #f59e0b;
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+        
+        .retry-button:hover {
+            background: #d97706;
+            transform: scale(1.05);
+        }
+        
+        .retry-button:active {
+            transform: scale(0.98);
+        }
+        
+        .features {
+            margin-top: 32px;
+            text-align: left;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 24px;
+        }
+        
+        .features h3 {
+            color: #0f172a;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        
+        .features ul {
+            list-style: none;
+            color: #64748b;
+            font-size: 14px;
+        }
+        
+        .features li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">📱</div>
+        <h1>You're Offline</h1>
+        <p>Don't worry! You can still browse products you've viewed before. Connect to the internet to see the latest updates.</p>
+        <button class="retry-button" onclick="window.location.reload()">
+            Try Again
+        </button>
+        <div class="features">
+            <h3>What you can do offline:</h3>
+            <ul>
+                <li>View previously loaded products</li>
+                <li>Browse cached content</li>
+                <li>Add items to cart (syncs when online)</li>
+                <li>Read product details</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
